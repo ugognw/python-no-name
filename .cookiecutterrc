@@ -1,0 +1,57 @@
+# This file exists so you can easily regenerate your project.
+#
+# `cookiepatcher` is a convenient shim around `cookiecutter`
+# for regenerating projects (it will generate a .cookiecutterrc
+# automatically for any template). To use it:
+#
+#    pip install cookiepatcher
+#    cookiepatcher gh:ionelmc/cookiecutter-pylibrary python-no-name
+#
+# See:
+#    https://pypi.org/project/cookiepatcher
+#
+# Alternatively, you can run:
+#
+#    cookiecutter --overwrite-if-exists --config-file=python-no-name/.cookiecutterrc gh:ionelmc/cookiecutter-pylibrary
+
+default_context:
+    cli_bin_name: "no_name"
+    codacy: "yes"
+    codacy_projectid: "9b29574117f2476098e056d72bf1c59a"
+    codeclimate: "yes"
+    codecov: "yes"
+    command_line_interface: "click"
+    coveralls: "yes"
+    distribution_name: "no-name"
+    email: "ugognw@gmail.com"
+    full_name: "Ugochukwu Nwosu"
+    gitchangelog: "yes"
+    github_actions: "yes"
+    gitlab_ci_cd: "no"
+    initialize_git_repository: "yes"
+    install_package: "yes"
+    install_precommit_hooks: "yes"
+    keywords: "Template"
+    license: "BSD 2-Clause License"
+    package_name: "no_name"
+    pre_commit: "yes"
+    project_name: "No Name"
+    project_short_description: "An example package. Generated with cookiecutter-pylibrary."
+    pypi_badge: "yes"
+    pypi_disable_upload: "no"
+    pytest_datadir: "yes"
+    pytest_xdist: "yes"
+    release_date: "today"
+    repo_hosting: "github.com"
+    repo_main_branch: "main"
+    repo_name: "python-no-name"
+    repo_username: "ugognw"
+    sphinx_docs_hosting: "https://python-no-name.readthedocs.io/"
+    sphinx_doctest: "yes"
+    sphinx_theme: "furo"
+    test_on_osx: "yes"
+    test_on_windows: "yes"
+    version: "0.0.0"
+    website: "https://www.law-two.com"
+    year_from: "2023"
+    year_to: "2023"

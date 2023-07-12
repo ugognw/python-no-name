@@ -1,0 +1,34 @@
+name: licenses
+
+on:
+  push:
+    paths:
+      - 'pyproject.toml'
+  pull_request:
+    paths:
+      - 'pyproject.toml'
+
+env:
+  POETRY_VERSION: "1.5.1"
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  check_licenses:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install poetry
+        run: pipx install poetry==${{ env.POETRY_VERSION }}
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: poetry
+      - name: Install Nox and doc dependencies
+        run: poetry install --only nox,docs
+      - name: Summarize licenses
+        run: poetry run nox -s licenses
+      - name: Upload licenses summary
+        uses: actions/upload-artifact@v3
+        with:
+          name: licenses-summary
+          path: licenses-summary.html
